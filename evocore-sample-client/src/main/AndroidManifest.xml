@@ -1,0 +1,29 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_evocore_sample"
+        android:label="EvoCore Sample"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="it.evocore.client.ID"
+            android:value="sample" />
+        <meta-data
+            android:name="it.evocore.client.NAMESPACE"
+            android:value="principale" />
+        <meta-data
+            android:name="it.evocore.client.CAPABILITIES"
+            android:value="inference.ask,status.read,tools.propose" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

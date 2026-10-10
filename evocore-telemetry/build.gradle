@@ -1,0 +1,29 @@
+plugins {
+    id "com.android.library"
+}
+
+android {
+    namespace "it.evocore.telemetry"
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 26
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildFeatures {
+        aidl true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation "androidx.annotation:annotation:1.9.1"
+    implementation "androidx.metrics:metrics-performance:1.0.0"
+
+    testImplementation "junit:junit:4.13.2"
+}

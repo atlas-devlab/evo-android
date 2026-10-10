@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature android:name="android.hardware.strongbox_keystore" android:required="false" />
+
+    <permission
+        android:name="it.evocore.permission.BIND_TELEMETRY"
+        android:label="Invio diagnostica privata a EvoLab"
+        android:protectionLevel="signature" />
+
+    <queries>
+        <package android:name="it.evocore.host" />
+        <package android:name="com.elia.evoconti" />
+    </queries>
+
+    <application
+        android:allowBackup="false"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <profileable android:shell="true" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".TelemetryCollectorService"
+            android:enabled="false"
+            android:exported="true"
+            android:permission="it.evocore.permission.BIND_TELEMETRY" />
+    </application>
+</manifest>

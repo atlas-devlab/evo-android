@@ -1,0 +1,15 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="it.evocore.permission.BIND_TELEMETRY" />
+
+    <queries>
+        <package android:name="it.evocore.lab" />
+    </queries>
+
+    <application>
+        <provider
+            android:name=".TelemetryInitProvider"
+            android:authorities="${applicationId}.evocore-telemetry-init"
+            android:exported="false"
+            android:initOrder="90" />
+    </application>
+</manifest>

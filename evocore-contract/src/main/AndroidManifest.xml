@@ -1,0 +1,6 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="it.evocore.permission.BIND_CORE" />
+    <queries>
+        <package android:name="it.evocore.host" />
+    </queries>
+</manifest>

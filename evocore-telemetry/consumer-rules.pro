@@ -1,0 +1,2 @@
+-keep class it.evocore.telemetry.ITelemetryCollector { *; }
+-keep class it.evocore.telemetry.TelemetryInitProvider { *; }

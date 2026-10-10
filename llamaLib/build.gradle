@@ -1,0 +1,75 @@
+plugins {
+    id "com.android.library"
+    id "org.jetbrains.kotlin.android"
+}
+
+def buildNativeLlama = providers.gradleProperty("buildNativeLlama")
+        .map { it.toBoolean() }
+        .getOrElse(false)
+
+android {
+    namespace "com.arm.aichat"
+    compileSdk 35
+    ndkVersion "29.0.13113456"
+
+    defaultConfig {
+        minSdk 26
+
+        ndk {
+            abiFilters "arm64-v8a", "x86_64"
+        }
+
+        if (buildNativeLlama) {
+            externalNativeBuild {
+                cmake {
+                    arguments "-DCMAKE_BUILD_TYPE=Release",
+                            "-DBUILD_SHARED_LIBS=ON",
+                            "-DLLAMA_BUILD_APP=OFF",
+                            "-DLLAMA_BUILD_COMMON=ON",
+                            "-DLLAMA_OPENSSL=OFF",
+                            "-DGGML_NATIVE=OFF",
+                            "-DGGML_BACKEND_DL=ON",
+                            "-DGGML_CPU_ALL_VARIANTS=ON",
+                            "-DGGML_LLAMAFILE=OFF"
+                }
+            }
+        }
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile "../third_party/llama.cpp/examples/llama.android/lib/src/main/AndroidManifest.xml"
+            java.srcDirs = [
+                    "../third_party/llama.cpp/examples/llama.android/lib/src/main/java",
+                    "src/main/java"
+            ]
+            if (!buildNativeLlama) {
+                jniLibs.srcDirs = ["src/main/jniLibs"]
+            }
+        }
+    }
+
+    if (buildNativeLlama) {
+        externalNativeBuild {
+            cmake {
+                path file("../third_party/llama.cpp/examples/llama.android/lib/src/main/cpp/CMakeLists.txt")
+                version "3.31.6"
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+}
+
+dependencies {
+    implementation "androidx.core:core-ktx:1.15.0"
+    implementation "androidx.datastore:datastore-preferences:1.1.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0"
+}
