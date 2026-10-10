@@ -1,0 +1,52 @@
+# Local IDE and SDK settings
+.idea/
+.vscode/
+*.iml
+local.properties
+.DS_Store
+Thumbs.db
+
+# Generated builds and caches, including diagnostic captures
+.gradle/
+.kotlin/
+.cxx/
+build/
+build-probe/
+__pycache__/
+.venv/
+node_modules/
+
+# App artifacts and native prebuilts (build JNI from source)
+*.apk
+*.aar
+*.aab
+*.so
+*.o
+*.obj
+*.class
+
+# Model weights and local application data
+*.gguf
+*.ggml
+*.safetensors
+*.onnx
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+*.sqlite-*
+*.log
+
+# Credentials and signing material
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+*.pem
+*.p12
+*.pfx
+*.key
+
+# Duplicate source archives
+/third_party/*.zip

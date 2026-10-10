@@ -1,0 +1,27 @@
+name: Feature or improvement
+description: Propose a focused addition to Evo Android.
+title: "[Proposal]: "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: Task or problem
+      description: What would a user or contributor be able to do more effectively?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Describe the result and affected modules. For client integration, explain the required context and capabilities.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives or smaller first step
+  - type: textarea
+    id: validation
+    attributes:
+      label: How to verify it
+      description: Suggest a concrete example, test, or flow that would establish the improvement.

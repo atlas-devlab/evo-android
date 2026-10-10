@@ -1,0 +1,10 @@
+* text=auto
+gradlew text eol=lf
+*.bat text eol=crlf
+*.jar binary
+*.png binary
+*.jpg binary
+*.webp binary
+*.pdf binary
+third_party/** linguist-vendored=true
+gradle/wrapper/** linguist-generated=true

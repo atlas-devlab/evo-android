@@ -1,0 +1,45 @@
+name: Bug report
+description: Report reproducible behavior in an Evo Android module.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: Use synthetic examples. Remove personal data, credentials, device identifiers, and private model or memory contents from logs and screenshots.
+  - type: input
+    id: module
+    attributes:
+      label: Affected module
+      placeholder: evocore-host, app, evocore-sample-client, evolab, or another module
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include required app approvals or model setup, using public model names and synthetic data.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Commit or branch, Android API level, ABI, emulator or device model, and relevant toolchain versions. Do not include serial numbers.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized logs or screenshots
+      description: Include only the excerpt needed to understand the failure.
