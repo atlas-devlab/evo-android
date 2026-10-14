@@ -1,5 +1,9 @@
 # Evo Android
 
+**License transition:** new original contributions default to AGPL-3.0-only.
+Earlier Apache-2.0 permissions and third-party licenses remain valid.
+Read the [license policy](LICENSE_POLICY.md) for the exact scope.
+
 A local-first Android prototype for sharing one on-device AI host across several applications.
 
 EvoCore owns model inference, access approvals, and scoped memory. Client apps keep their domain data and send a small, expiring context for the current task. This repository brings the host, client contract, sample app, EvoConti, and EvoLab into one Gradle project.
@@ -135,12 +139,12 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for setup, review expectations, and three
 
 [EvoCall Assistant](https://github.com/atlas-devlab/evo-call-assistant) is a
 separate Windows/Python conversation assistant prototype. It is published under
-Apache 2.0 and welcomes contributions. It is not an Android module or an EvoCore client.
+a prospective AGPL-3.0-only contribution policy, preserving earlier Apache-2.0 permissions, and welcomes contributions. It is not an Android module or an EvoCore client.
 
 ## License and third-party code
 
-Original project code is licensed under [Apache License 2.0](LICENSE). Vendored dependencies retain their own licenses, including the [MIT license for llama.cpp](third_party/llama.cpp/LICENSE) and the notices supplied with its dependencies.
+New original contributions default to [AGPL-3.0-only](LICENSE). The [license policy](LICENSE_POLICY.md) preserves earlier [Apache-2.0 permissions](LICENSES/Apache-2.0-legacy.txt) and explains the transition. Vendored dependencies retain their own licenses, including the [MIT license for llama.cpp](third_party/llama.cpp/LICENSE) and the notices supplied with its dependencies.
 
 The public source distribution excludes GGUF files, including upstream vocabulary/test fixtures, and prebuilt native binaries. Android inference libraries are compiled from the included sources. Some standalone upstream `llama.cpp` tests therefore need fixtures obtained separately from upstream; those tests are outside the Android Gradle checks above.
 
-Model weights are not included and are not covered by the project's Apache license. Follow the license of the model you choose.
+Model weights are not included and are not covered by the project's software licenses. Follow the license of the model you choose.

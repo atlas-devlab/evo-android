@@ -1,7 +1,8 @@
 # Third-party notices
 
-The root Apache License 2.0 applies to original Evo project code. It does not
-replace the licenses of vendored dependencies or separately obtained models.
+New original contributions default to AGPL-3.0-only under [LICENSE_POLICY.md](LICENSE_POLICY.md).
+Earlier Apache-2.0 permissions remain valid. Neither policy replaces the licenses
+of vendored dependencies, build tools, assets, or separately obtained models.
 
 ## llama.cpp
 

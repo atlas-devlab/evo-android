@@ -70,4 +70,14 @@ Done when the parser's accepted and rejected inputs are documented by runnable t
 
 ## Licensing
 
-By submitting a contribution, you agree that your original contribution can be distributed under this project's Apache License 2.0. Third-party material must have a compatible license, clear provenance, and its required notices. Model licenses are separate; do not add model files to the repository.
+New original contributions intentionally submitted for inclusion are offered under
+**AGPL-3.0-only** by default, as explained in [LICENSE_POLICY.md](LICENSE_POLICY.md).
+Contributors retain copyright. If a different applicable license is necessary,
+identify it explicitly for review before acceptance.
+
+Earlier Apache-2.0 grants remain valid. Preserve legacy and third-party notices;
+do not replace them with AGPL headers. Third-party material must have clear
+provenance, compatible terms, and its required notices. Submit only material
+you have authority to contribute. New original source files should carry
+SPDX-License-Identifier: AGPL-3.0-only. External models and libraries retain
+their own terms; do not add model weights.

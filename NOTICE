@@ -1,6 +1,10 @@
 Evo Android
 Copyright 2026 Atlas DevLab contributors
 
-Original Evo project code is distributed under the Apache License, Version 2.0.
-Vendored third-party code retains its original licenses and attribution notices.
+License policy transition published on 2026-10-14:
+new original contributions are AGPL-3.0-only by default. See LICENSE_POLICY.md.
+Apache-2.0 permissions granted through commit b543ba5ee8d9b032bf1ff00c166809b234bbe560
+remain valid. Historical LICENSE and NOTICE are preserved verbatim in LICENSES.
+Third-party material retains its applicable licenses and attribution notices.
+This NOTICE is informational; it does not modify any license terms.
 See THIRD_PARTY_NOTICES.md and the license files in third_party/llama.cpp.
